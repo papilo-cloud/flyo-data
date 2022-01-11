@@ -1,0 +1,217 @@
+/*###STYLES COLOR */
+:root
+{
+    --Gradient-col: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/bg-mobile.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    font-family: sans-serif;
+}
+.bg 
+{
+    display: none;
+}
+.data, .txt
+{
+    position: relative;
+    width: 100%;
+    background: var(--Dark-Blue);
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem
+}
+
+.data
+{
+    border-radius: 10px 5rem 10px 10px;
+    padding: 1.5rem;
+}
+.data .icons 
+{
+    position: relative;
+    display: flex;
+   margin-top: 1rem;
+    align-items: flex-end;
+}
+.icons .icon
+{
+    margin-right: 10px;
+    background: var(--Very-Dark-Blue);
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.txt
+{
+    color: hsl(243, 100%, 83%);
+    text-align: center;
+    position: relative;
+}
+.txt .txt1 span
+{
+    color: var(--Pale-Blue);
+    font-weight: 600;
+}
+.txt .txt2
+{
+    position: relative;
+    width: 100%;
+    height: 1.1rem;
+    background: var(--Very-Dark-Blue);
+    border-radius: 20px;
+    padding: 3px;
+    text-align: left;
+}
+.txt2 span
+{
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    background: var(--Gradient-col);
+    border-radius: 20px;
+    padding: 1px;
+}
+.txt2 span::after
+{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 90%;
+    right: 1px;
+    border-radius: 50%;
+    background: var(--Pale-Blue);
+}
+.txt .txt3
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--Pale-Blue);
+    font-weight: 600;
+}
+
+.txt .tooltip
+{
+    position: absolute;
+    /* width: 100px; */
+    background: var(--Pale-Blue);
+    padding:10px 20px;
+    /* left: 25%; */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    bottom: -2.5rem;
+    color: var(--Very-Dark-Blue);
+    font-size: 25px;
+    font-weight: 900;
+}
+.txt .tooltip span
+{
+    color: var(--Grayish-Blue);
+    font-size: 11px;
+    font-weight: lighter;
+
+}
+
+@media screen and (min-width:1000px) 
+{
+    body 
+    {
+        flex-direction: row;
+        padding: 10rem 6rem;
+        align-items: flex-end;
+        background-color: var(--Very-Dark-Blue);
+       background-image: none;
+    }
+    .bg
+    {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+    }
+    .data
+    {
+        width: 500px;
+        margin-right: 2rem;
+        height: 200px;
+    }
+    .txt .tooltip
+    {
+        position: absolute;
+       bottom: 6rem;
+       width: 150px;
+       left: 80%;
+       /* transform: translateX(30%); */
+       border-radius: 8px 8px 0 8px;
+    }
+   
+    .txt .tooltip::after
+    {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: var(--Pale-Blue);
+        bottom: -5px;
+        right: 0;
+        transform: skewY(40deg);
+    }
+}
+
+@media screen and (min-width:1440px) 
+{
+   
+    .txt .tooltip
+    {
+        position: absolute;
+       bottom: 6rem;
+       width: 150px;
+       left: 85%;
+       /* transform: translateX(30%); */
+       border-radius: 8px 8px 0 8px;
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
